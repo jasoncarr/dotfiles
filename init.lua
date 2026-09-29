@@ -34,6 +34,39 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- Highlight fenced Markdown code blocks using Neovim's built-in syntax files.
+-- This is dependency-free and works on Linux and Windows.
+-- Aliases map common Markdown fence names to Neovim syntax filetypes.
+vim.g.markdown_fenced_languages = {
+  "bash=sh",
+  "shell=sh",
+  "sh",
+  "zsh=sh",
+  "powershell=ps1",
+  "pwsh=ps1",
+  "ps1",
+  "lua",
+  "python",
+  "javascript",
+  "js=javascript",
+  "typescript",
+  "ts=typescript",
+  "jsx=javascriptreact",
+  "tsx=typescriptreact",
+  "json",
+  "jsonc=json",
+  "html",
+  "css",
+  "scss",
+  "sql",
+  "yaml",
+  "yml=yaml",
+  "toml",
+  "vim",
+  "c",
+  "cpp",
+}
+
 -- Markdown / notes settings
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "markdown",
