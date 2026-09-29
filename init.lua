@@ -1,5 +1,6 @@
--- ===== Notes folder (set by setup script) =====
-vim.g.notes_dir = vim.fn.expand("/var/home/jasoncarr/notes")
+-- ===== Notes folder =====
+-- Portable across Fedora/Linux and native Windows Neovim.
+vim.g.notes_dir = vim.fn.expand("~/notes")
 
 -- nvim-tree replaces the built-in file browser
 vim.g.loaded_netrw = 1
