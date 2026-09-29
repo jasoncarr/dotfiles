@@ -1,6 +1,12 @@
 -- ===== Notes folder =====
--- Portable across Fedora/Linux and native Windows Neovim.
-vim.g.notes_dir = vim.fn.expand("~/notes")
+-- Use the local notes folder on Linux and the OneDrive-backed notes folder on Windows.
+local is_windows = vim.fn.has("win32") == 1
+
+if is_windows then
+  vim.g.notes_dir = vim.fn.expand("~/OneDrive - Mastec/notes")
+else
+  vim.g.notes_dir = vim.fn.expand("~/notes")
+end
 
 -- obsidian.nvim requires the workspace directory to already exist.
 vim.fn.mkdir(vim.g.notes_dir, "p")
