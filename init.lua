@@ -2,6 +2,9 @@
 -- Portable across Fedora/Linux and native Windows Neovim.
 vim.g.notes_dir = vim.fn.expand("~/notes")
 
+-- obsidian.nvim requires the workspace directory to already exist.
+vim.fn.mkdir(vim.g.notes_dir, "p")
+
 -- nvim-tree replaces the built-in file browser
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
