@@ -124,3 +124,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
+
+-- Theme switching (Gruvbox, TokyoNight, Kanagawa, Catppuccin)
+require("theme-switcher").setup()
