@@ -1,21 +1,68 @@
 return {
-  "ellisonleao/gruvbox.nvim",
-  lazy = false,
-  priority = 1000,
-  config = function()
-  -- Heading text colour + faint background tint, H1 to H6
-  local headings = {
-    { fg = "#fabd2f", bg = "#413a29" },  -- H1 yellow
-    { fg = "#fe8019", bg = "#423326" },  -- H2 orange
-    { fg = "#b8bb26", bg = "#393a28" },  -- H3 green
-    { fg = "#8ec07c", bg = "#343a32" },  -- H4 aqua
-    { fg = "#83a598", bg = "#333735" },  -- H5 blue
-    { fg = "#d3869b", bg = "#3d3336" },  -- H6 purple
-  }
-    require("gruvbox").setup({
+  {
+    "ellisonleao/gruvbox.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
       contrast = "soft",
       transparent_mode = false,
-    })
-    vim.cmd.colorscheme("gruvbox")
-  end,
+    },
+  },
+
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      style = "moon",
+      transparent = false,
+      styles = {
+        comments = { italic = true },
+        keywords = { italic = true },
+      },
+    },
+  },
+
+  {
+    "rebelot/kanagawa.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      compile = false,
+      undercurl = true,
+      commentStyle = { italic = true },
+      keywordStyle = { italic = true },
+      statementStyle = { bold = false },
+      transparent = false,
+      dimInactive = false,
+      terminalColors = true,
+      theme = "wave",
+      background = {
+        dark = "wave",
+        light = "lotus",
+      },
+    },
+  },
+
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      flavour = "mocha",
+      background = {
+        light = "latte",
+        dark = "mocha",
+      },
+      transparent_background = false,
+      term_colors = true,
+      integrations = {
+        gitsigns = true,
+        nvimtree = true,
+        telescope = { enabled = true },
+        which_key = true,
+      },
+    },
+  },
 }
