@@ -1,10 +1,10 @@
 local M = {}
 
 local themes = {
-  { name = "Gruvbox",          colorscheme = "gruvbox",          background = "dark" },
-  { name = "TokyoNight Moon",  colorscheme = "tokyonight-moon",  background = "dark" },
-  { name = "Kanagawa Wave",    colorscheme = "kanagawa-wave",    background = "dark" },
-  { name = "Catppuccin Mocha", colorscheme = "catppuccin-mocha", background = "dark" },
+  { name = "Gruvbox", colorscheme = "gruvbox", background = "dark" },
+  { name = "Vague",   colorscheme = "vague",   background = "dark" },
+  { name = "Melange", colorscheme = "melange", background = "dark" },
+  { name = "Tender",  colorscheme = "tender",  background = "dark" },
 }
 
 local function current_index()
